@@ -17,8 +17,16 @@ const calculate = (operator, a, b) => {
     }
 }
 
-console.log(calculate('+', 2, 4));
-console.log(calculate('-', 2, 4));
-console.log(calculate('*', 2, 4));
-console.log(calculate('/', 2, 4));
-console.log(calculate('/', 2, 0));
+try {
+    console.log(calculate('+', 2, 4));
+    console.log(calculate('-', 2, 4));
+    console.log(calculate('*', 2, 4));
+    console.log(calculate('/', 2, 4));
+    console.log(calculate('/', 2, 0));
+} catch (error) {
+    if (error instanceof DivideByZeroError) {
+        console.log("Error: Division by zero is not allowed.");
+    } else {
+        console.log("Error: " + error.message);
+    }
+}
