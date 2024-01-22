@@ -2,6 +2,9 @@ const {DivideByZeroError} = require('./divide-by-zero-error');
 
 
 const calculate = (operator, a, b) => {
+  if (typeof a !== 'number' || typeof b !== 'number') {
+    throw new Error(`Invalid input: a and b must be numbers, got ${typeof a} and ${typeof b}`);
+}
     switch (operator) {
         case '+': return a + b;
         case '-': return a - b;
@@ -19,6 +22,6 @@ const calculate = (operator, a, b) => {
 
 console.log(calculate('+', 2, 4));
 console.log(calculate('-', 2, 4));
-console.log(calculate('*', 2, 4));
+console.log(calculate('*', '2', 4));
 console.log(calculate('/', 2, 4));
 console.log(calculate('/', 2, 0));
