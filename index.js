@@ -18,11 +18,6 @@ const calculate = (operator, a, b) => {
 }
 
 
-// console.log(calculate('+', 2, 4));
-// console.log(calculate('-', 2, 4));
-// console.log(calculate('*', 2, 4));
-// console.log(calculate('/', 2, 4));
-// console.log(calculate('/', 2, 0));
 
 console.log(calculate('+', 4, 3));
 console.log(calculate('-', 4, 3));
