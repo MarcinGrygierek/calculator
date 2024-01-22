@@ -4,11 +4,11 @@ const {DivideByZeroError} = require('./divide-by-zero-error');
 const calculate = (operator, a, b) => {
     switch (operator) {
         case '+': return `${a} + ${b} = ${a + b}`;
-        case '-': return a - b;
-        case '*': return a * b;
+        case '-': return `${a} + ${b} = ${a - b}`;
+        case '*': return `${a} + ${b} = ${a * b}`;
         case '/': 
             if (b !== 0) {
-              return a / b
+              return `${a} + ${b} = ${a / b}`
             }
             else {
               throw new DivideByZeroError();
@@ -24,5 +24,4 @@ const calculate = (operator, a, b) => {
 // console.log(calculate('/', 2, 4));
 // console.log(calculate('/', 2, 0));
 
-console.log(calculate('+', 4, 10));
-console.log(typeof calculate('+', 4, 10));
+console.log(calculate('/', 4, 0));
