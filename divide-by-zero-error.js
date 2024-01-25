@@ -1,11 +1,10 @@
 class DivideByZeroError extends Error {
-    
-    constructor(message) {
-        super(message);
-        this.name = "DivideByZeroError";
-    }
+  constructor(message) {
+    super(message);
+    this.name = 'DivideByZeroError';
+  }
 }
 
-module.exports = {
-    DivideByZeroError,
-}
+export default {
+  DivideByZeroError,
+};
