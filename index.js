@@ -11,14 +11,20 @@ const calculate = (operator, a, b) => {
               return a / b
             }
             else {
-              throw new DivideByZeroError();
+                try {
+                    throw new DivideByZeroError('Nie można dzielić przez zero');
+                } catch (error) {
+                    // console.error(error.message);
+                    console.log(`wyszło ci:`);
+                    return null;
+                }
             }
-        default: throw new Error('Invalid operator!')
-    }
-}
+
+}}
 
 console.log(calculate('+', 2, 4));
 console.log(calculate('-', 2, 4));
 console.log(calculate('*', 2, 4));
 console.log(calculate('/', 2, 4));
 console.log(calculate('/', 2, 0));
+
