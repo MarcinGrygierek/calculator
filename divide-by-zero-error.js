@@ -1,6 +1,6 @@
 class DivideByZeroError extends Error {
     
-    constructor(message) {
+    constructor(message = 'Nie dziel przez zero bo wyjdzie błąd') {
         super(message);
         this.name = "DivideByZeroError";
     }
