@@ -14,7 +14,7 @@ const calculate = (operator, a, b) => {
                 try {
                     throw new DivideByZeroError('Nie można dzielić przez zero');
                 } catch (error) {
-                    // console.error(error.message);
+                    // console.error(error.message)    ;
                     console.log(`wyszło ci:`);
                     return null;
                 }
